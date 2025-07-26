@@ -57,7 +57,7 @@ export default function ApprovedUsersScreen() {
     
     try {
       const token = await AsyncStorage.getItem('token');
-      const res = await fetch('http://192.168.100.127:5000/api/users', {
+      const res = await fetch('https://makedarun-backend-2.onrender.com/api/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -155,7 +155,7 @@ export default function ApprovedUsersScreen() {
           onPress: async () => {
             try {
               const token = await AsyncStorage.getItem('token');
-              const res = await fetch(`http://192.168.100.127:5000/api/users/${userId}`, {
+              const res = await fetch(`https://makedarun-backend-2.onrender.com/api/users/${userId}`, {
                 method: 'PUT',
                 headers: {
                   'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ export default function ApprovedUsersScreen() {
           onPress: async () => {
             try {
               const token = await AsyncStorage.getItem('token');
-              const res = await fetch(`http://192.168.100.127:5000/api/users/${userId}`, {
+              const res = await fetch(`https://makedarun-backend-2.onrender.com/api/users/${userId}`, {
                 method: 'DELETE',
                 headers: {
                   Authorization: `Bearer ${token}`,
@@ -230,7 +230,7 @@ export default function ApprovedUsersScreen() {
     if (!selectedUser) return;
     try {
       const token = await AsyncStorage.getItem('token');
-      const res = await fetch(`http://192.168.100.127:5000/api/users/${selectedUser._id}`, {
+      const res = await fetch(`https://makedarun-backend-2.onrender.com/api/users/${selectedUser._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

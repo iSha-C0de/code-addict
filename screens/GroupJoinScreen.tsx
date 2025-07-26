@@ -44,7 +44,7 @@ export default function GroupScreen() {
     try {
       if (!token || !user?._id) throw new Error('Authentication required');
 
-      const res = await fetch('http://192.168.100.127:5000/api/groups/join', {
+      const res = await fetch('https://makedarun-backend-2.onrender.com/api/groups/join', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ export default function GroupScreen() {
     if (!user?.group || !token) return;
     try {
       setLoading(true);
-      const res = await fetch(`http://192.168.100.127:5000/api/groups/members/${encodeURIComponent(user.group)}`, {
+      const res = await fetch(`https://makedarun-backend-2.onrender.com/api/groups/members/${encodeURIComponent(user.group)}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -130,7 +130,7 @@ export default function GroupScreen() {
                   style: 'destructive',
                   onPress: async () => {
                     try {
-                      const res = await fetch('http://192.168.100.127:5000/api/groups/leave', {
+                      const res = await fetch('https://makedarun-backend-2.onrender.com/api/groups/leave', {
                         method: 'POST',
                         headers: {
                           'Content-Type': 'application/json',

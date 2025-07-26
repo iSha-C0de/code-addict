@@ -74,7 +74,7 @@ export default function ProfileScreen() {
         }
 
         console.log('🌐 Fetching profile with token:', token.substring(0, 10) + '...');
-        const res = await fetch(`http://192.168.100.127:5000/api/users/profile`, {
+        const res = await fetch(`https://makedarun-backend-2.onrender.com/api/users/profile`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -144,7 +144,7 @@ export default function ProfileScreen() {
       };
 
       console.log('💾 Saving profile:', profileUpdate);
-      const res = await fetch(`http://192.168.100.127:5000/api/users/profile`, {
+      const res = await fetch(`https://makedarun-backend-2.onrender.com/api/users/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -182,7 +182,7 @@ export default function ProfileScreen() {
       const updatedGoal = profile.goal + goalValue;
 
       console.log('🎯 Adding to goal:', goalValue, 'Current goal:', profile.goal, 'New total:', updatedGoal);
-      const res = await fetch(`http://192.168.100.127:5000/api/users/profile`, {
+      const res = await fetch(`https://makedarun-backend-2.onrender.com/api/users/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

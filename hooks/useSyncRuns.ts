@@ -18,7 +18,7 @@ export default function useSyncRuns() {
 
         for (const run of runs) {
           try {
-            const res = await fetch('http://192.168.100.127:5000/api/runs', {
+            const res = await fetch('https://makedarun-backend-2.onrender.com/api/runs', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(run),

@@ -50,7 +50,7 @@ export default function GroupRunnerDashboard() {
 
     try {
       const response = await fetch(
-        `http://192.168.100.127:5000/api/groups/members/${encodeURIComponent(user.group)}`,
+        `https://makedarun-backend-2.onrender.com/api/groups/members/${encodeURIComponent(user.group)}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,

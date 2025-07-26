@@ -49,7 +49,7 @@ export default function RegisterScreen({ navigation }: any) {
 
     setLoading(true);
     try {
-      const res = await fetch('http://192.168.100.127:5000/api/auth/register', {
+      const res = await fetch('https://makedarun-backend-2.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userName, password, emailAdd, role }),

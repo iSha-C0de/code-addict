@@ -31,7 +31,7 @@ export default function GroupMembersScreen({ route }: any) {
     const fetchGroupData = async () => {
       try {
         const res = await fetch(
-          `http://192.168.100.127:5000/api/groups/members/${groupName}`,
+          `https://makedarun-backend-2.onrender.com/api/groups/members/${groupName}`,
           {
             headers: {
               Authorization: `Bearer ${user?.token}`,
@@ -69,7 +69,7 @@ export default function GroupMembersScreen({ route }: any) {
         text: 'Yes',
         onPress: async () => {
           try {
-            const res = await fetch('http://192.168.100.127:5000/api/groups/leave', {
+            const res = await fetch('https://makedarun-backend-2.onrender.com/api/groups/leave', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

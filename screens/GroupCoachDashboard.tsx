@@ -41,7 +41,7 @@ export default function GroupCoachDashboard() {
 
   const fetchGroups = async () => {
     try {
-      const res = await fetch('http://192.168.100.127:5000/api/groups/coach/groups', {
+      const res = await fetch('https://makedarun-backend-2.onrender.com/api/groups/coach/groups', {
         headers: { Authorization: `Bearer ${user?.token}` },
       });
       const data = await res.json();
@@ -75,7 +75,7 @@ export default function GroupCoachDashboard() {
           style: 'destructive',
           onPress: async () => {
             try {
-              await fetch(`http://192.168.100.127:5000/api/groups/${groupId}`, {
+              await fetch(`https://makedarun-backend-2.onrender.com/api/groups/${groupId}`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${user?.token}` },
               });

@@ -45,7 +45,7 @@ export default function GroupEditScreen() {
       }
 
       if (Object.keys(updateData).length > 0) {
-        const res = await fetch(`http://192.168.100.127:5000/api/groups/${groupId}`, {
+        const res = await fetch(`https://makedarun-backend-2.onrender.com/api/groups/${groupId}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

@@ -88,7 +88,7 @@ export default function GroupMembersScreen({ route }: any) {
       }
 
       const res = await fetch(
-        `http://192.168.100.127:5000/api/groups/members/${encodeURIComponent(groupName)}`,
+        `https://makedarun-backend-2.onrender.com/api/groups/members/${encodeURIComponent(groupName)}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -295,16 +295,16 @@ export default function GroupMembersScreen({ route }: any) {
 
       switch (action) {
         case 'resetGoals':
-          endpoint = 'http://192.168.100.127:5000/api/coach/reset-goals';
+          endpoint = 'https://makedarun-backend-2.onrender.com/api/coach/reset-goals';
           if (newGoal !== undefined) {
             body.newGoal = newGoal;
           }
           break;
         case 'deleteRuns':
-          endpoint = 'http://192.168.100.127:5000/api/coach/delete-runs';
+          endpoint = 'https://makedarun-backend-2.onrender.com/api/coach/delete-runs';
           break;
         case 'removeMembers':
-          endpoint = 'http://192.168.100.127:5000/api/coach/remove-members';
+          endpoint = 'https://makedarun-backend-2.onrender.com/api/coach/remove-members';
           break;
       }
 
@@ -376,7 +376,7 @@ export default function GroupMembersScreen({ route }: any) {
               return;
             }
 
-            const res = await fetch('http://192.168.100.127:5000/api/groups/leave', {
+            const res = await fetch('https://makedarun-backend-2.onrender.com/api/groups/leave', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

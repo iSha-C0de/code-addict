@@ -24,7 +24,7 @@ export default function AuditScreen() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch('http://192.168.100.127:5000/api/audit');
+      const res = await fetch('https://makedarun-backend-2.onrender.com/api/audit');
       const data = await res.json();
       setLogs(data);
     } catch (err) {

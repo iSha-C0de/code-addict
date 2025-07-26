@@ -79,7 +79,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
           const parsedUser = JSON.parse(storedUser);
 
           console.log('🔍 Verifying token with server...');
-          const response = await fetch('http://192.168.100.127:5000/api/auth/verify', {
+          const response = await fetch('https://makedarun-backend-2.onrender.com/api/auth/verify', {
             headers: { Authorization: `Bearer ${token}` },
           });
 
@@ -117,7 +117,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
       } else if (token && role) {
         console.log('🔄 No stored user but have token, attempting verification...');
         try {
-          const response = await fetch('http://192.168.100.127:5000/api/auth/verify', {
+          const response = await fetch('https://makedarun-backend-2.onrender.com/api/auth/verify', {
             headers: { Authorization: `Bearer ${token}` },
           });
 

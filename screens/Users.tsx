@@ -6,7 +6,7 @@ export default function UsersScreen() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://192.168.100.127:5000/api/users')
+    axios.get('https://makedarun-backend-2.onrender.com/api/users')
       .then(res => setUsers(res.data))
       .catch(console.error);
   }, []);

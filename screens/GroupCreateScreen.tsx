@@ -26,7 +26,7 @@ export default function GroupCreateScreen() {
       const token = await AsyncStorage.getItem('token');
       if (!token) throw new Error('No auth token found');
 
-      const res = await fetch('http://192.168.100.127:5000/api/groups/create', {
+      const res = await fetch('https://makedarun-backend-2.onrender.com/api/groups/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -79,7 +79,7 @@ export default function RunHistoryScreen() {
         if (!token) {
           throw new Error('No authentication token');
         }
-        const res = await fetch(`http://192.168.100.127:5000/api/runs/user/${userId}`, {
+        const res = await fetch(`https://makedarun-backend-2.onrender.com/api/runs/user/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

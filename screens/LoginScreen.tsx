@@ -26,7 +26,7 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
 
     try {
       console.log('📡 Making fetch request...');
-      const response = await fetch('http://192.168.100.127:5000/api/auth/login', {
+      const response = await fetch('https://makedarun-backend-2.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       const role = await AsyncStorage.getItem('role');
 
       if (token && role) {
-        const response = await fetch('http://192.168.100.127:5000/api/auth/verify', {
+        const response = await fetch('https://makedarun-backend-2.onrender.com/api/auth/verify', {
           headers: { Authorization: `Bearer ${token}` },
         });
 

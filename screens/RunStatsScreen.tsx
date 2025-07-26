@@ -82,7 +82,7 @@ const RunStatsScreen = () => {
       setProgress(totalDistance);
 
       console.log('🌐 Fetching user profile...');
-      const profileRes = await fetch(`http://192.168.100.127:5000/api/users/profile`, {
+      const profileRes = await fetch(`https://makedarun-backend-2.onrender.com/api/users/profile`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log('📡 Profile response status:', profileRes.status);
@@ -96,7 +96,7 @@ const RunStatsScreen = () => {
       setGoal(profileData.goal && !isNaN(profileData.goal) ? Number(profileData.goal) : 1);
 
       console.log('💾 Updating progress:', totalDistance);
-      const progressRes = await fetch(`http://192.168.100.127:5000/api/users/progress`, {
+      const progressRes = await fetch(`https://makedarun-backend-2.onrender.com/api/users/progress`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

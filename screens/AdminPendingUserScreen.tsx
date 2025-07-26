@@ -28,7 +28,7 @@ interface User {
 
 type RoleFilter = 'all' | 'runner' | 'coach';
 
-const BASE_URL = 'http://192.168.100.127:5000/api';
+const BASE_URL = 'https://makedarun-backend-2.onrender.com/api';
 
 export default function AdminUserListScreen() {
   const [allUsers, setAllUsers] = useState<User[]>([]);
